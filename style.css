@@ -104,3 +104,27 @@ footer { border-top: 1px solid var(--rule); padding-top: 1.25rem; color: var(--m
   nav { display: none; }
   .page { display: block; padding: 0; }
 }
+
+[hidden] { display: none !important; }
+
+.langbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: center; gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.langbar a {
+  padding: 0.35rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.langbar a.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.langbar a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+#en, #de { scroll-margin-top: 4rem; }
+nav { top: 4.5rem; }
+@media print { .langbar { display: none; } }
